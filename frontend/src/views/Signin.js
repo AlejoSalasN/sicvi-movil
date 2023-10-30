@@ -5,15 +5,14 @@ import {
   TextInput,
   TouchableOpacity,
   StyleSheet,
+  ScrollView,
 } from "react-native";
 
 const Signin = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <View style={styles.titleContainer}>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <Text style={styles.title}>SICVI</Text>
-      </View>
-      <View style={styles.content}>
         <TextInput placeholder="Correo electrónico" style={styles.input} />
         <TextInput placeholder="Contraseña" style={styles.input} />
         <TouchableOpacity
@@ -25,15 +24,22 @@ const Signin = ({ navigation }) => {
         <TouchableOpacity onPress={() => navigation.navigate("Forget")}>
           <Text style={styles.forgetText}>¿Olvidaste tu contraseña?</Text>
         </TouchableOpacity>
-      </View>
-      <View style={styles.createUserContainer}>
-        <TouchableOpacity
-          onPress={() => navigation.navigate("Signup")}
-          style={styles.createUser}
-        >
-          <Text style={styles.createUserText}>Crear cuenta</Text>
-        </TouchableOpacity>
-      </View>
+        <View style={styles.buttonContainer}>
+          <View style={styles.omitirContainer}>
+            <TouchableOpacity onPress={() => navigation.navigate("All")}>
+              <Text style={styles.omitirText}>Omitir</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.omitirContainer}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate("Signup")}
+              style={styles.createUser}
+            >
+              <Text style={styles.createUserText}>Crear cuenta</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </ScrollView>
     </View>
   );
 };
@@ -42,23 +48,18 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    marginHorizontal: 15,
+    paddingHorizontal: 15,
     alignItems: "center",
+    justifyContent: "center",
   },
-  titleContainer: {
-    flex: 1,
-    justifyContent: "flex-start",
-  },
+  titleContainer: {},
   title: {
-    fontSize: 64,
+    fontSize: 36,
     fontWeight: "900",
     textAlign: "center",
     marginTop: 6,
     color: "#59028e",
-  },
-  content: {
-    flex: 1,
-    alignItems: "center",
+    marginBottom: 48,
   },
   input: {
     width: 308,
@@ -67,6 +68,7 @@ const styles = StyleSheet.create({
     borderWidth: 0.5,
     borderRadius: 15,
     borderColor: "#7f7777",
+    color: "#7f7777",
     paddingHorizontal: 10,
     marginVertical: 6,
   },
@@ -88,12 +90,22 @@ const styles = StyleSheet.create({
     color: "#e80b0b",
     fontSize: 20,
     fontWeight: "bold",
+    textAlign: "center",
   },
-  createUserContainer: {
+  buttonContainer: {
     flex: 1,
-    justifyContent: "flex-end",
+    flexDirection: "row",
+    marginTop: 48,
+  },
+  omitirContainer: {
+    flex: 1,
     alignItems: "center",
-    marginBottom: 24,
+    justifyContent: "center",
+  },
+  omitirText: {
+    color: "#59028e",
+    fontSize: 20,
+    fontWeight: "bold",
   },
   createUser: {
     borderColor: "#59028e",
@@ -101,7 +113,7 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     alignItems: "center",
     justifyContent: "center",
-    width: 308,
+    width: 150,
     height: 56,
   },
   createUserText: {

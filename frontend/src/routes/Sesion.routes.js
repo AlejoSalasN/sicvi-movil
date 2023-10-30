@@ -2,6 +2,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 import Signin from "../views/Signin";
 import Signup from "../views/Signup";
+import SignupNext from "../views/SignupNext";
 import ForgetPassword from "../views/ForgetPassword";
 import Navigation from "./Routes";
 
@@ -24,6 +25,11 @@ const RoutesSesion = () => {
         <Stack.Screen
           name="Signup"
           component={Signup}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="SignupNext"
+          component={SignupNext}
           options={{ headerShown: false }}
         />
         <Stack.Screen

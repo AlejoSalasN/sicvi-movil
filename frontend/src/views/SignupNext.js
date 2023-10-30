@@ -8,41 +8,19 @@ import {
   ScrollView,
 } from "react-native";
 
-const Signup = ({ navigation }) => {
+const SignupNext = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Text style={styles.title}>SICVI</Text>
-        <TextInput placeholder="Nombre" style={styles.input} />
-        <TextInput
-          placeholder="Apellido paterno (opcional)"
-          style={styles.input}
-        />
-        <TextInput
-          placeholder="Apellido paterno (opcional)"
-          style={styles.input}
-        />
-        <TextInput
-          placeholder="Apellido materno (opcional)"
-          style={styles.input}
-        />
-        <TextInput
-          type="number"
-          placeholder="Número de celular"
-          style={styles.input}
-          keyboardType="numeric"
-        />
-        <TextInput
-          type="date"
-          placeholder="Fecha de nacimiento"
-          style={styles.input}
-        />
-        <TextInput placeholder="Sexo" style={styles.input} />
+        <TextInput placeholder="Correo electrónico" style={styles.input} />
+        <TextInput placeholder="Contraseña" style={styles.input} />
+        <TextInput placeholder="Repetir contraseña" style={styles.input} />
         <TouchableOpacity
-          onPress={() => navigation.navigate("SignupNext")}
+          onPress={() => navigation.navigate("All")}
           style={styles.createUser}
         >
-          <Text style={styles.createUserText}>Siguiente</Text>
+          <Text style={styles.createUserText}>Crear cuenta</Text>
         </TouchableOpacity>
       </ScrollView>
     </View>
@@ -63,12 +41,12 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginTop: 6,
     color: "#59028e",
-    marginBottom: 48,
+    marginBottom: 24,
   },
   input: {
     width: 308,
-    height: 46,
-    fontSize: 16,
+    height: 56,
+    fontSize: 20,
     borderWidth: 0.5,
     borderRadius: 15,
     borderColor: "#7f7777",
@@ -84,7 +62,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     width: 308,
-    height: 46,
+    height: 56,
   },
   createUserText: {
     color: "#59028e",
@@ -93,4 +71,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Signup;
+export default SignupNext;
