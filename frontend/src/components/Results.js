@@ -8,7 +8,6 @@ const Results = ({ visible, onClose, respuesta }) => {
       onRequestClose={() => onClose()}
       transparent
       animationType="slide"
-      style={{ backgroundColor }}
     >
       <View style={styles.container}>
         <View style={styles.content}>
