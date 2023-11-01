@@ -24,13 +24,13 @@ const Signin = ({ navigation }) => {
     if (valCorreo) {
       if (password !== "") {
         const user = await axios
-          .post(`http://localhost:3000/users/${correo}`, {
+          .post(`http://10.0.2.2:8000:3000/users/${correo}`, {
             password,
           })
           .catch((err) => console.log(err));
         setUsuario(user);
-        console.log("el susuario es: ", user);
-        console.log("el susuario es: ", usuario);
+        console.log("el usuario es: ", user);
+        console.log("el usuario es: ", usuario);
         if (user !== null) {
           navigation.navigate("All");
         }

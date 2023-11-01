@@ -4,7 +4,6 @@ import {
   StyleSheet,
   ScrollView,
   TouchableOpacity,
-  Image,
   Text,
 } from "react-native";
 import Events from "../components/Events";
@@ -42,7 +41,7 @@ const eventos = [
 const informaciones = [
   {
     title: "En esta parte va el título de la información educativa prueba 1",
-    uri: "https://i.pinimg.com/736x/cc/43/2c/cc432c6e99ec675baf1d920fa7212d5c.jpg",
+    uri: "https://www.ucb.edu.bo/wp-content/uploads/2021/02/violencia.jpg",
     date: "2023-11-01",
   },
   {
@@ -62,7 +61,7 @@ const informaciones = [
   },
   {
     title: "En esta parte va el título de la información educativa prueba 5",
-    uri: "https://i.pinimg.com/736x/cc/43/2c/cc432c6e99ec675baf1d920fa7212d5c.jpg",
+    uri: "https://www.ucb.edu.bo/wp-content/uploads/2021/02/violencia.jpg",
     date: "2023-11-01",
   },
 ];
