@@ -8,11 +8,11 @@ const usersRouter = require("./routes/users.routes");
 dotenv.config();
 const app = express();
 
-app.use(morgan("tiny"));
+app.use(cors());
+app.use(morgan("dev"));
 
 const port = process.env.port || 3000;
 
-app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(fileUpload({ useTempFiles: true }));

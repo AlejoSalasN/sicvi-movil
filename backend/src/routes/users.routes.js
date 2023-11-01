@@ -4,21 +4,25 @@ const pool = require("../db/pool");
 const bcrypt = require("bcrypt");
 
 router
-  .route("/")
-  .get(async (req, res) => {
-    const { email, password } = req.body;
+  .route("/:correo")
+  .post(async (req, res) => {
+    const email = req.params.correo;
+    const { password } = req.body;
     try {
       const { rows } = await pool.query(
         "SELECT id_usuario, u_nombre, u_paterno, u_materno, u_telefono, u_fecha_nac, u_password, u_sexo, u_direccion FROM usuario WHERE u_email=$1",
         [email]
       );
+      console.log(rows);
       bcrypt.compare(password, rows[0].u_password, (err, result) => {
         if (err) {
           res.status(422).json({ error: "Error al desencriptar" });
         } else if (result) {
           res.json(rows[0]);
+          console.log(rows[0]);
         } else {
           res.status(401).json({ mensaje: "Contraseña incorrecta" });
+          console.log("contraseña");
         }
       });
     } catch (error) {

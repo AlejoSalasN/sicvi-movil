@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -6,19 +6,66 @@ import {
   TouchableOpacity,
   StyleSheet,
   ScrollView,
+  Alert,
 } from "react-native";
 
+import axios from "axios";
+
+let expCorreo =
+  /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
+
 const Signin = ({ navigation }) => {
+  const [correo, setCorreo] = useState("");
+  const [password, setPassword] = useState("");
+  const [valCorreo, setValCorreo] = useState(false);
+  const [usuario, setUsuario] = useState({});
+
+  const handleLogin = async () => {
+    if (valCorreo) {
+      if (password !== "") {
+        const user = await axios
+          .post(`http://localhost:3000/users/${correo}`, {
+            password,
+          })
+          .catch((err) => console.log(err));
+        setUsuario(user);
+        console.log("el susuario es: ", user);
+        console.log("el susuario es: ", usuario);
+        if (user !== null) {
+          navigation.navigate("All");
+        }
+      } else {
+        Alert.alert("Llene todos los campos.");
+      }
+    } else {
+      Alert.alert("Introduzca un correo válido");
+    }
+  };
+
   return (
     <View style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Text style={styles.title}>SICVI</Text>
-        <TextInput placeholder="Correo electrónico" style={styles.input} />
-        <TextInput placeholder="Contraseña" style={styles.input} />
-        <TouchableOpacity
-          onPress={() => navigation.navigate("All")}
-          style={styles.loginUser}
-        >
+        <TextInput
+          placeholder="Correo electrónico"
+          style={[
+            styles.input,
+            { borderColor: valCorreo ? "#7f7777" : "#e80b0b" },
+          ]}
+          value={correo}
+          onChangeText={(value) => {
+            setCorreo(value);
+            setValCorreo(expCorreo.test(correo));
+          }}
+        />
+        <TextInput
+          placeholder="Contraseña"
+          value={password}
+          onChangeText={(value) => setPassword(value)}
+          secureTextEntry={true}
+          style={[styles.input, { borderColor: "#7f7777" }]}
+        />
+        <TouchableOpacity onPress={handleLogin} style={styles.loginUser}>
           <Text style={styles.loginUserText}>Inciar sesión</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("Forget")}>
@@ -67,7 +114,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     borderWidth: 0.5,
     borderRadius: 15,
-    borderColor: "#7f7777",
     color: "#7f7777",
     paddingHorizontal: 10,
     marginVertical: 6,
