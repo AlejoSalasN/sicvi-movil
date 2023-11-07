@@ -9,7 +9,8 @@ CREATE TABLE contacto (
 
 CREATE TABLE prueba (
     id_prueba SERIAL PRIMARY KEY,
-    p_detalles TEXT NOT NULL
+    p_detalles TEXT NOT NULL,
+    p_archivo TEXT NOT NULL,
 );
 
 CREATE TABLE denuncia (
