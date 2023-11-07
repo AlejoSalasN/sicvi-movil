@@ -84,7 +84,7 @@ const Denuncia = () => {
     archivo: "",
     detalles: "",
   });
-  const Prueba = [];
+  let Prueba = [];
 
   const handleCancelDenuncia = () => {
     setAnonima(false);

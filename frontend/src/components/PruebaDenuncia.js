@@ -29,6 +29,7 @@ const PruebaDenuncia = ({
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.All,
       allowsEditing: true,
+      aspect: [4, 3],
       quality: 1,
     });
 
@@ -43,7 +44,6 @@ const PruebaDenuncia = ({
       visible={visiblePrueba}
       onRequestClose={() => setVisiblePrueba()}
       transparent
-      animationType="slide"
     >
       <View style={styles.container}>
         <View style={styles.content}>
@@ -185,7 +185,8 @@ const styles = StyleSheet.create({
     borderWidth: 0.5,
   },
   file: {
-    flex: 1,
+    width: "100%",
+    height: "100%",
     borderRadius: 15,
   },
   input: {
@@ -196,9 +197,8 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   buttonNext: {
-    flex: 1,
-    alignItems: "flex-end",
-    justifyContent: "center",
+    flexDirection: "row",
+    alignItems: "center",
   },
   textNext: {
     color: "#4f3bce",
