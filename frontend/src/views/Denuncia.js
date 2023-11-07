@@ -178,7 +178,7 @@ const Denuncia = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Centros de ayuda</Text>
+      <Text style={styles.header}>Denuncias</Text>
       <View style={{ marginBottom: 12 }}>
         <Header title={"Centro de ayuda"} />
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
@@ -191,12 +191,13 @@ const Denuncia = () => {
       </View>
 
       <ScrollView showsVerticalScrollIndicator={false}>
-        <Header title={"Denuncias"} />
+        <Header title={"Tipos de Denuncias"} />
         <View style={styles.informationContainer}>
           {denuncias?.map((info, index) => (
-            <Text key={`denucia-${index}`}>{`${index + 1}. ${info.title} - ${
-              info.tipo
-            }`}</Text>
+            <View key={`denucia-${index}`} style={styles.denunciaItem}>
+              <Text style={styles.denunciaTitle}>{info.title}</Text>
+              <Text style={styles.denunciaTipo}>{info.tipo}</Text>
+            </View>
           ))}
         </View>
         <View style={styles.levantar}>
@@ -268,7 +269,7 @@ const Denuncia = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#f5f5f5",
     paddingHorizontal: 15,
   },
   header: {
@@ -276,6 +277,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginTop: 6,
+    color: "#4f3bce",
   },
   levantar: {
     alignItems: "flex-end",
@@ -283,6 +285,27 @@ const styles = StyleSheet.create({
   levantarText: {
     color: "#4f3bce",
     fontSize: 20,
+    fontWeight: "bold",
+  },
+  informationContainer: {
+    marginTop: 12,
+  },
+  denunciaItem: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    backgroundColor: "#fff",
+    padding: 10,
+    marginVertical: 8,
+    borderRadius: 10,
+  },
+  denunciaTitle: {
+    fontSize: 16,
+    color: "#333",
+  },
+  denunciaTipo: {
+    fontSize: 16,
+    color: "#4f3bce",
+    fontWeight: "bold",
   },
 });
 

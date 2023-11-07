@@ -48,7 +48,7 @@ const Encuesta = () => {
       );
     } else {
       setRespuesta(
-        "NO PARECE QUE EXPIREMENTES VIOLENCIA, pero recuerda que la violencia puede tomar muchas formas. Mantén relaciones saludables y busca apoyo si lo necesitas."
+        "NO PARECE QUE EXPERIMENTES VIOLENCIA, pero recuerda que la violencia puede tomar muchas formas. Mantén relaciones saludables y busca apoyo si lo necesitas."
       );
     }
 
@@ -58,6 +58,7 @@ const Encuesta = () => {
   const handleModalClose = () => {
     setVisible(false);
   };
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Cuestionario</Text>
@@ -69,7 +70,7 @@ const Encuesta = () => {
           las siguientes opciones: sí, a veces, rara vez, no.
         </Text>
         {preguntas?.map((pregunta, index) => (
-          <View key={`opcion-${index}`} style={styles.content}>
+          <View key={`opcion-${index}`} style={styles.questionContainer}>
             <Text style={styles.textQuestion}>
               {`${index + 1}. ${pregunta}`}
             </Text>
@@ -109,9 +110,19 @@ const styles = StyleSheet.create({
     marginTop: 6,
     marginBottom: 12,
   },
-  content: {
+  questionContainer: {
     marginVertical: 6,
-    padding: 5,
+    padding: 10,
+    backgroundColor: "#F7F7F7", // Color de fondo suave
+    borderRadius: 10,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   textQuestion: {
     marginBottom: 6,
