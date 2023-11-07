@@ -9,6 +9,7 @@ import {
 import Events from "../components/Events";
 import Information from "../components/Information";
 import Header from "../components/Header";
+import AlertButton from "../components/AlertButton";
 
 const eventos = [
   {
@@ -101,6 +102,7 @@ const Home = ({ navigation }) => {
           ))}
         </View>
       </ScrollView>
+      <AlertButton />
     </View>
   );
 };

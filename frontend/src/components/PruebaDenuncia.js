@@ -209,23 +209,3 @@ const styles = StyleSheet.create({
 });
 
 export default PruebaDenuncia;
-
-// /*
-// import * as DocumentPicker from 'expo-document-picker';
-// import axios from 'axios';
-
-// async function uploadFile() {
-//   try {
-//     const result = await DocumentPicker.getDocumentAsync({});
-//     const formData = new FormData();
-//     formData.append('file', {
-//       uri: result.uri,
-//       name: result.name,
-//       type: result.type,
-//     });
-//     const response = await axios.post('https://example.com/upload', formData);
-//     console.log(response.data);
-//   } catch (error) {
-//     console.error(error);
-//   }
-// } */

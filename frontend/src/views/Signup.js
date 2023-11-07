@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -7,8 +7,10 @@ import {
   StyleSheet,
   ScrollView,
 } from "react-native";
+import SelectSexo from "../components/SelectSexo";
 
 const Signup = ({ navigation }) => {
+  const [sexo, setSexo] = useState("");
   return (
     <View style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -37,7 +39,7 @@ const Signup = ({ navigation }) => {
           placeholder="Fecha de nacimiento"
           style={styles.input}
         />
-        <TextInput placeholder="Sexo" style={styles.input} />
+        <SelectSexo setSexo={setSexo} />
         <TouchableOpacity
           onPress={() => navigation.navigate("SignupNext")}
           style={styles.createUser}

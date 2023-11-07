@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   TextInput,
 } from "react-native";
+import SelectSexo from "./SelectSexo";
 
 const InformacionAgresor = ({
   visibleAgresor,
@@ -26,8 +27,6 @@ const InformacionAgresor = ({
   setDireccion_a,
   setSexo_a,
 }) => {
-  const [femenino, setFemenino] = useState(false);
-  const [masculino, setMasculino] = useState(false);
   return (
     <Modal
       visible={visibleAgresor}
@@ -78,46 +77,7 @@ const InformacionAgresor = ({
             value={direccion_a}
             onChangeText={(text) => setDireccion_a(text)}
           />
-          <View style={styles.containerSexo}>
-            <View style={{ flex: 1 }}>
-              <TouchableOpacity
-                onPress={() => {
-                  setMasculino(false);
-                  setFemenino(true);
-                  setSexo_a("Femenino");
-                }}
-              >
-                <View style={{ flexDirection: "row", alignItems: "center" }}>
-                  <View
-                    style={[
-                      styles.anonimo,
-                      { backgroundColor: femenino ? "#4f3bce" : "#d9d9d9" },
-                    ]}
-                  />
-                  <Text>Femenino</Text>
-                </View>
-              </TouchableOpacity>
-            </View>
-            <View style={{ flex: 1 }}>
-              <TouchableOpacity
-                onPress={() => {
-                  setFemenino(false);
-                  setMasculino(true);
-                  setSexo_a("Femenino");
-                }}
-              >
-                <View style={{ flexDirection: "row", alignItems: "center" }}>
-                  <View
-                    style={[
-                      styles.anonimo,
-                      { backgroundColor: masculino ? "#4f3bce" : "#d9d9d9" },
-                    ]}
-                  />
-                  <Text>Masculino</Text>
-                </View>
-              </TouchableOpacity>
-            </View>
-          </View>
+          <SelectSexo setSexo={setSexo_a} />
           <View style={styles.buttonNext}>
             <View style={{ flex: 1 }}>
               <TouchableOpacity
@@ -181,12 +141,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginBottom: 6,
   },
-  anonimo: {
-    width: 16,
-    height: 16,
-    borderRadius: 8,
-    marginRight: 12,
-  },
   input: {
     borderBottomWidth: 0.5,
     paddingHorizontal: 12,
@@ -204,10 +158,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginVertical: 12,
     fontWeight: "bold",
-  },
-  containerSexo: {
-    flexDirection: "row",
-    marginBottom: 12,
   },
 });
 
