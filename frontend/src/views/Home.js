@@ -14,27 +14,27 @@ import AlertButton from "../components/AlertButton";
 const eventos = [
   {
     title: "Violencia contra la mujer",
-    uri: "https://i.pinimg.com/736x/3e/f5/76/3ef576743d37759ce97de1ab8b1b3cce.jpg",
+    uri: "https://radioondaazul.com/wp-content/uploads/2019/11/03_violencia-contra-la-mujer_26-11-2019.jpg",
     date: "09-18",
   },
   {
     title: "Violencia contra los niños",
-    uri: "https://tierragamer.com/wp-content/uploads/2021/10/Re-Zero-Rem-Arte.jpg",
+    uri: "http://cd1.eju.tv/wp-content/uploads/2019/03/5c7936d204af0.jpg",
     date: "09-18",
   },
   {
     title: "Violencia contra los animales",
-    uri: "https://i.pinimg.com/736x/3e/f5/76/3ef576743d37759ce97de1ab8b1b3cce.jpg",
+    uri: "https://img.lagaceta.com.ar/fotos/notas/2020/11/23/podcast-violencia-contra-animales-esta-naturalizada-870049-125327.jpg",
     date: "09-18",
   },
   {
     title: "Violencia contra el hombre",
-    uri: "https://i.pinimg.com/736x/3e/f5/76/3ef576743d37759ce97de1ab8b1b3cce.jpg",
+    uri: "https://tribunacampeche.com/wp-content/uploads/2021/06/violenciahombresok.jpg",
     date: "09-18",
   },
   {
     title: "Violencia psocológica",
-    uri: "https://i.pinimg.com/736x/3e/f5/76/3ef576743d37759ce97de1ab8b1b3cce.jpg",
+    uri: "https://radiofelicidad.mx/wp-content/uploads/2020/03/Depositphotos_85074342_l-2015-1024x682.jpg",
     date: "09-18",
   },
 ];
@@ -47,17 +47,17 @@ const informaciones = [
   },
   {
     title: "En esta parte va el título de la información educativa prueba 2",
-    uri: "https://i.pinimg.com/736x/cc/43/2c/cc432c6e99ec675baf1d920fa7212d5c.jpg",
+    uri: "http://www.todosayudan.com/wp-content/uploads/et_temp/no_violencia-284294_1050x675.jpg",
     date: "2023-11-01",
   },
   {
     title: "En esta parte va el título de la información educativa prueba 3",
-    uri: "https://i.pinimg.com/736x/cc/43/2c/cc432c6e99ec675baf1d920fa7212d5c.jpg",
+    uri: "https://cdn.elimpulso.com/media/2020/08/violencia-696x418.jpg",
     date: "2023-11-01",
   },
   {
     title: "En esta parte va el título de la información educativa prueba 4",
-    uri: "https://i.pinimg.com/736x/cc/43/2c/cc432c6e99ec675baf1d920fa7212d5c.jpg",
+    uri: "https://diariovoces.com.pe/wp-content/uploads/2020/02/actualidad-feminicidios-peru-2020-ya-son-dos-casos-registrados-primeros-dias-ano-n401619-612x408-644422.jpg",
     date: "2023-11-01",
   },
   {

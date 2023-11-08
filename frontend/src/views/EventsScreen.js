@@ -5,35 +5,35 @@ import EventsCard from "../components/EventsCard";
 const eventos = [
   {
     title: "Violencia contra la mujer",
-    uri: "https://i.pinimg.com/736x/3e/f5/76/3ef576743d37759ce97de1ab8b1b3cce.jpg",
+    uri: "https://radioondaazul.com/wp-content/uploads/2019/11/03_violencia-contra-la-mujer_26-11-2019.jpg",
     date: "09-18",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempor lectus vel purus suscipit, id interdum lectus auctor. Vivamus congue, urna ut porttitor pellentesque, metus purus ullamcorper odio, vitae semper mauris eros eget tortor. Vivamus augue mauris...",
   },
   {
     title: "Violencia contra los niños",
-    uri: "https://tierragamer.com/wp-content/uploads/2021/10/Re-Zero-Rem-Arte.jpg",
+    uri: "http://cd1.eju.tv/wp-content/uploads/2019/03/5c7936d204af0.jpg",
     date: "09-18",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempor lectus vel purus suscipit, id interdum lectus auctor. Vivamus congue, urna ut porttitor pellentesque, metus purus ullamcorper odio, vitae semper mauris eros eget tortor. Vivamus augue mauris...",
   },
   {
     title: "Violencia contra los animales",
-    uri: "https://i.pinimg.com/736x/3e/f5/76/3ef576743d37759ce97de1ab8b1b3cce.jpg",
+    uri: "https://img.lagaceta.com.ar/fotos/notas/2020/11/23/podcast-violencia-contra-animales-esta-naturalizada-870049-125327.jpg",
     date: "09-18",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempor lectus vel purus suscipit, id interdum lectus auctor. Vivamus congue, urna ut porttitor pellentesque, metus purus ullamcorper odio, vitae semper mauris eros eget tortor. Vivamus augue mauris...",
   },
   {
     title: "Violencia contra el hombre",
-    uri: "https://i.pinimg.com/736x/3e/f5/76/3ef576743d37759ce97de1ab8b1b3cce.jpg",
+    uri: "https://tribunacampeche.com/wp-content/uploads/2021/06/violenciahombresok.jpg",
     date: "09-18",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempor lectus vel purus suscipit, id interdum lectus auctor. Vivamus congue, urna ut porttitor pellentesque, metus purus ullamcorper odio, vitae semper mauris eros eget tortor. Vivamus augue mauris...",
   },
   {
     title: "Violencia psocológica",
-    uri: "https://i.pinimg.com/736x/3e/f5/76/3ef576743d37759ce97de1ab8b1b3cce.jpg",
+    uri: "https://radiofelicidad.mx/wp-content/uploads/2020/03/Depositphotos_85074342_l-2015-1024x682.jpg",
     date: "09-18",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempor lectus vel purus suscipit, id interdum lectus auctor. Vivamus congue, urna ut porttitor pellentesque, metus purus ullamcorper odio, vitae semper mauris eros eget tortor. Vivamus augue mauris...",
