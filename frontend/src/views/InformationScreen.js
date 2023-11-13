@@ -1,31 +1,22 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import Information from "../components/Information";
+import AlertButton from "../components/AlertButton";
 
 const informaciones = [
   {
-    title: "En esta parte va el título de la información educativa prueba 1",
-    uri: "https://i.pinimg.com/736x/cc/43/2c/cc432c6e99ec675baf1d920fa7212d5c.jpg",
+    title: "Atención primaria nate la violencia de genero",
+    uri: "https://res.cloudinary.com/dkkohwnui/image/upload/v1699455803/infografia-violencia-genero-atencion-primaria-scaled_v12pbu.jpg",
     date: "2023-11-01",
   },
   {
-    title: "En esta parte va el título de la información educativa prueba 2",
-    uri: "https://i.pinimg.com/736x/cc/43/2c/cc432c6e99ec675baf1d920fa7212d5c.jpg",
+    title: "Derecho a una vida libre de violencia",
+    uri: "https://res.cloudinary.com/dkkohwnui/image/upload/v1699455776/articulo_sobre_la_vioelcia_unek29.jpg",
     date: "2023-11-01",
   },
   {
-    title: "En esta parte va el título de la información educativa prueba 3",
-    uri: "https://i.pinimg.com/736x/cc/43/2c/cc432c6e99ec675baf1d920fa7212d5c.jpg",
-    date: "2023-11-01",
-  },
-  {
-    title: "En esta parte va el título de la información educativa prueba 4",
-    uri: "https://i.pinimg.com/736x/cc/43/2c/cc432c6e99ec675baf1d920fa7212d5c.jpg",
-    date: "2023-11-01",
-  },
-  {
-    title: "En esta parte va el título de la información educativa prueba 5",
-    uri: "https://i.pinimg.com/736x/cc/43/2c/cc432c6e99ec675baf1d920fa7212d5c.jpg",
+    title: "Campamento para la defensa de la mujer",
+    uri: "https://res.cloudinary.com/dkkohwnui/image/upload/v1699455869/DefensaMujer_rkozpy.jpg",
     date: "2023-11-01",
   },
 ];
@@ -43,6 +34,7 @@ const InformationScreen = () => {
           />
         ))}
       </ScrollView>
+      <AlertButton />
     </View>
   );
 };

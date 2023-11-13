@@ -23,16 +23,20 @@ const Signin = ({ navigation }) => {
   const handleLogin = async () => {
     if (valCorreo) {
       if (password !== "") {
-        const user = await axios
-          .post(`http://10.0.2.2:8000:3000/users/${correo}`, {
-            password,
-          })
-          .catch((err) => console.log(err));
-        setUsuario(user);
-        console.log("el usuario es: ", user);
-        console.log("el usuario es: ", usuario);
-        if (user !== null) {
-          navigation.navigate("All");
+        try {
+          const user = await axios
+            .post(`http://192.168.0.8:3000/api/user/${correo}`, {
+              password,
+            })
+            .catch((err) => console.log(err));
+          setUsuario(user.data);
+          console.log("el usuario es user: ", user.data);
+          console.log("el usuario es usuario: ", usuario);
+          if (user !== null) {
+            navigation.navigate("All");
+          }
+        } catch (err) {
+          console.error(err);
         }
       } else {
         Alert.alert("Llene todos los campos.");
@@ -53,8 +57,9 @@ const Signin = ({ navigation }) => {
             { borderColor: valCorreo ? "#7f7777" : "#e80b0b" },
           ]}
           value={correo}
-          onChangeText={(value) => {
-            setCorreo(value);
+          onChangeText={(text) => {
+            text.toLowerCase();
+            setCorreo(text);
             setValCorreo(expCorreo.test(correo));
           }}
         />

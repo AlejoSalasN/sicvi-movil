@@ -29,6 +29,7 @@ const PruebaDenuncia = ({
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.All,
       allowsEditing: true,
+      base64: true,
       aspect: [4, 3],
       quality: 1,
     });
@@ -36,7 +37,7 @@ const PruebaDenuncia = ({
     console.log(result);
 
     if (!result.canceled) {
-      setImage(result.assets[0].uri);
+      setImage(result.assets[0].base64);
     }
   };
   return (
@@ -83,7 +84,10 @@ const PruebaDenuncia = ({
           </TouchableOpacity>
           {image ? (
             <View style={styles.fileContainer}>
-              <Image style={styles.file} source={{ uri: image }} />
+              <Image
+                style={styles.file}
+                source={{ uri: "data:image/webp;base64," + image }}
+              />
             </View>
           ) : null}
 
@@ -103,7 +107,7 @@ const PruebaDenuncia = ({
             <View style={{ flex: 1 }}>
               <TouchableOpacity
                 onPress={() => {
-                  onBackLugar();
+                  onBackPrueba();
                   setVisiblePrueba(false);
                   setVisibleLugar(true);
                 }}

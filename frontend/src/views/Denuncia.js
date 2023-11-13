@@ -12,28 +12,29 @@ import LevantarDenuncia from "../components/LevantarDenuncia";
 import InformacionAgresor from "../components/InformacionAgresor";
 import UbicacionDenuncia from "../components/UbicacionDenuncia";
 import PruebaDenuncia from "../components/PruebaDenuncia";
+import AlertButton from "../components/AlertButton";
 
 const centros = [
   {
-    uri: "https://i.pinimg.com/736x/3e/f5/76/3ef576743d37759ce97de1ab8b1b3cce.jpg",
+    uri: "https://res.cloudinary.com/dkkohwnui/image/upload/v1699456335/RosarioCampos_o7z7lc.jpg",
+    title: "Lugares alternativos",
+  },
+  {
+    uri: "https://res.cloudinary.com/dkkohwnui/image/upload/v1699456358/LevantateMujer_t7ubqq.jpg",
     title: "Levántate mujer",
   },
   {
-    uri: "https://i.pinimg.com/736x/3e/f5/76/3ef576743d37759ce97de1ab8b1b3cce.jpg",
-    title: "Levántate mujer",
+    uri: "https://res.cloudinary.com/dkkohwnui/image/upload/v1699456346/fundacion2_jfhtgx.png",
+    title: "Casa de la mujer",
   },
   {
-    uri: "https://i.pinimg.com/736x/3e/f5/76/3ef576743d37759ce97de1ab8b1b3cce.jpg",
-    title: "Levántate mujer",
+    uri: "https://res.cloudinary.com/dkkohwnui/image/upload/v1699456335/RosarioCampos_o7z7lc.jpg",
+    title: "Rosatio Campos",
   },
-  {
-    uri: "https://i.pinimg.com/736x/3e/f5/76/3ef576743d37759ce97de1ab8b1b3cce.jpg",
-    title: "Levántate mujer",
-  },
-  {
-    uri: "https://i.pinimg.com/736x/3e/f5/76/3ef576743d37759ce97de1ab8b1b3cce.jpg",
-    title: "Levántate mujer",
-  },
+  // {
+  //   uri: "https://i.pinimg.com/736x/3e/f5/76/3ef576743d37759ce97de1ab8b1b3cce.jpg",
+  //   title: "Levántate mujer",
+  // },
 ];
 
 const denuncias = [
@@ -60,6 +61,8 @@ const denuncias = [
 ];
 
 const Denuncia = () => {
+  //CLOUDINARY_URL=cloudinary://185959214259264:Fyw4wlre7O5lp7sJxOg3Dxjsi1w@dkkohwnui
+
   const [visibleDenuncia, setVisibleDenuncia] = useState(false);
   const [visibleAgresor, setVisibleAgresor] = useState(false);
   const [visibleLugar, setVisibleLugar] = useState(false);
@@ -262,6 +265,7 @@ const Denuncia = () => {
         addFile={addFile}
         onFinish={onFinish}
       />
+      <AlertButton />
     </View>
   );
 };

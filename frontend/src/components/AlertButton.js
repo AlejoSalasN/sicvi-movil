@@ -17,10 +17,12 @@ const AlertButton = () => {
       const url = `https://maps.app.goo.gl/?link=https://maps.google.com/?q=${userLocation.coords.latitude},${userLocation.coords.longitude}`;
 
       // Reemplaza 'NúmeroDeTelefono' con el número de teléfono de destino
-      const phoneNumber = "59167082332";
+      const phoneNumber = "59179653115";
 
       // Abrir WhatsApp con el mensaje
-      Linking.openURL(`https://wa.me/?text=${url}`);
+      Linking.openURL(
+        `https://wa.me/?text=Auxilio, estoy en está dirección: ${url}`
+      );
     }
   }, [userLocation, setUserLocation]);
   const alerta = async () => {
