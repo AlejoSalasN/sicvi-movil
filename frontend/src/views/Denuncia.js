@@ -37,28 +37,28 @@ const centros = [
   // },
 ];
 
-const denuncias = [
-  {
-    title: "Abuso Sexual",
-    tipo: "Anónimo",
-  },
-  {
-    title: "Abuso Económico",
-    tipo: "Registrado",
-  },
-  {
-    title: "Acoso callejero",
-    tipo: "Anónimo",
-  },
-  {
-    title: "Abuso Sexual",
-    tipo: "Anónimo",
-  },
-  {
-    title: "Abuso de poder",
-    tipo: "Anónimo",
-  },
-];
+// const denuncias = [
+//   {
+//     title: "Abuso Sexual",
+//     tipo: "Anónimo",
+//   },
+//   {
+//     title: "Abuso Económico",
+//     tipo: "Registrado",
+//   },
+//   {
+//     title: "Acoso callejero",
+//     tipo: "Anónimo",
+//   },
+//   {
+//     title: "Abuso Sexual",
+//     tipo: "Anónimo",
+//   },
+//   {
+//     title: "Abuso de poder",
+//     tipo: "Anónimo",
+//   },
+// ];
 
 const Denuncia = () => {
   //CLOUDINARY_URL=cloudinary://185959214259264:Fyw4wlre7O5lp7sJxOg3Dxjsi1w@dkkohwnui
@@ -181,7 +181,7 @@ const Denuncia = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Denuncias</Text>
+      <Text style={styles.header}>Denuncia</Text>
       <View style={{ marginBottom: 12 }}>
         <Header title={"Centro de ayuda"} />
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
@@ -204,7 +204,10 @@ const Denuncia = () => {
           ))}
         </View>
         <View style={styles.levantar}>
-          <TouchableOpacity onPress={() => setVisibleDenuncia(true)}>
+          <TouchableOpacity
+            style={styles.levantarButton}
+            onPress={() => setVisibleDenuncia(true)}
+          >
             <Text style={styles.levantarText}>Levantar denuncia</Text>
           </TouchableOpacity>
         </View>
@@ -281,15 +284,22 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginTop: 6,
-    color: "#4f3bce",
+    color: "black",
   },
   levantar: {
     alignItems: "flex-end",
   },
+  levantarButton: {
+    backgroundColor: "#59028e",
+    borderRadius: 10,
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+  },
   levantarText: {
-    color: "#4f3bce",
+    color: "#fff",
     fontSize: 20,
     fontWeight: "bold",
+    textAlign: "center",
   },
   informationContainer: {
     marginTop: 12,

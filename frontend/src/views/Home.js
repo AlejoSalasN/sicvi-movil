@@ -12,61 +12,61 @@ import Header from "../components/Header";
 import AlertButton from "../components/AlertButton";
 import axios from "axios";
 
-const eventos = [
-  {
-    title: "Violencia sexual y de pareja",
-    uri: "https://res.cloudinary.com/dkkohwnui/image/upload/v1699455860/eventoVirual_vw9rg0.webp",
-    date: "09-18",
-  },
-  {
-    title: "Violencia de genero",
-    uri: "https://res.cloudinary.com/dkkohwnui/image/upload/v1699455848/alto_no_mas_violecia_genero_ewuhad.webp",
-    date: "09-18",
-  },
-  {
-    title: "Mujer Boliviana",
-    uri: "https://res.cloudinary.com/dkkohwnui/image/upload/v1699455786/MujerBoliviana_zunhol.webp",
-    date: "09-18",
-  },
-  // {
-  //   title: "Violencia contra el hombre",
-  //   uri: "https://i.pinimg.com/736x/3e/f5/76/3ef576743d37759ce97de1ab8b1b3cce.jpg",
-  //   date: "09-18",
-  // },
-  // {
-  //   title: "Violencia psocológica",
-  //   uri: "https://i.pinimg.com/736x/3e/f5/76/3ef576743d37759ce97de1ab8b1b3cce.jpg",
-  //   date: "09-18",
-  // },
-];
+// const eventos = [
+//   {
+//     title: "Violencia sexual y de pareja",
+//     uri: "https://res.cloudinary.com/dkkohwnui/image/upload/v1699455860/eventoVirual_vw9rg0.webp",
+//     date: "09-18",
+//   },
+//   {
+//     title: "Violencia de genero",
+//     uri: "https://res.cloudinary.com/dkkohwnui/image/upload/v1699455848/alto_no_mas_violecia_genero_ewuhad.webp",
+//     date: "09-18",
+//   },
+//   {
+//     title: "Mujer Boliviana",
+//     uri: "https://res.cloudinary.com/dkkohwnui/image/upload/v1699455786/MujerBoliviana_zunhol.webp",
+//     date: "09-18",
+//   },
+//   {
+//     title: "Violencia contra el hombre",
+//     uri: "https://i.pinimg.com/736x/3e/f5/76/3ef576743d37759ce97de1ab8b1b3cce.jpg",
+//     date: "09-18",
+//   },
+//   {
+//     title: "Violencia psocológica",
+//     uri: "https://i.pinimg.com/736x/3e/f5/76/3ef576743d37759ce97de1ab8b1b3cce.jpg",
+//     date: "09-18",
+//   },
+// ];
 
-const informaciones = [
-  {
-    title: "Atención primaria nate la violencia de genero",
-    uri: "https://res.cloudinary.com/dkkohwnui/image/upload/v1699455803/infografia-violencia-genero-atencion-primaria-scaled_v12pbu.jpg",
-    date: "2023-11-01",
-  },
-  {
-    title: "Derecho a una vida libre de violencia",
-    uri: "https://res.cloudinary.com/dkkohwnui/image/upload/v1699455776/articulo_sobre_la_vioelcia_unek29.jpg",
-    date: "2023-11-01",
-  },
-  {
-    title: "Campamento para la defensa de la mujer",
-    uri: "https://res.cloudinary.com/dkkohwnui/image/upload/v1699455869/DefensaMujer_rkozpy.jpg",
-    date: "2023-11-01",
-  },
-  // {
-  //   title: "En esta parte va el título de la información educativa prueba 4",
-  //   uri: "https://i.pinimg.com/736x/cc/43/2c/cc432c6e99ec675baf1d920fa7212d5c.jpg",
-  //   date: "2023-11-01",
-  // },
-  // {
-  //   title: "En esta parte va el título de la información educativa prueba 5",
-  //   uri: "https://www.ucb.edu.bo/wp-content/uploads/2021/02/violencia.jpg",
-  //   date: "2023-11-01",
-  // },
-];
+// const informaciones = [
+//   {
+//     title: "Atención primaria nate la violencia de genero",
+//     uri: "https://res.cloudinary.com/dkkohwnui/image/upload/v1699455803/infografia-violencia-genero-atencion-primaria-scaled_v12pbu.jpg",
+//     date: "2023-11-01",
+//   },
+//   {
+//     title: "En esta parte va el título de la información educativa prueba 2",
+//     uri: "https://i.pinimg.com/736x/cc/43/2c/cc432c6e99ec675baf1d920fa7212d5c.jpg",
+//     date: "2023-11-01",
+//   },
+//   {
+//     title: "En esta parte va el título de la información educativa prueba 3",
+//     uri: "https://i.pinimg.com/736x/cc/43/2c/cc432c6e99ec675baf1d920fa7212d5c.jpg",
+//     date: "2023-11-01",
+//   },
+//   {
+//     title: "En esta parte va el título de la información educativa prueba 4",
+//     uri: "https://i.pinimg.com/736x/cc/43/2c/cc432c6e99ec675baf1d920fa7212d5c.jpg",
+//     date: "2023-11-01",
+//   },
+//   {
+//     title: "En esta parte va el título de la información educativa prueba 5",
+//     uri: "https://www.ucb.edu.bo/wp-content/uploads/2021/02/violencia.jpg",
+//     date: "2023-11-01",
+//   },
+// ];
 
 const Home = ({ navigation }) => {
   const [eventos, setEventos] = useState([]);
